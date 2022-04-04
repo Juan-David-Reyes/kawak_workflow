@@ -1,6 +1,66 @@
 :root{
+    --C1:#5C50D1;
+    --C2:#5EDD5B;
+    --C3:#151139;
+    --C4:#E2E2E2;
+    --C5:#FAFAFA;
 
+    --body-color:#FAFAFA;
+
+    --bg-button1:#7049ED;
+    --bg-button2:#5EDD5B;
+    --bg-button3:#FFFFFF;
+    --border-button:#7049ED;
+    --txt-button1:#FFFFFF;
+    --txt-button2:#7049ED;
+
+    --txt_dark:#282828;
+    --txt_light:#FFFFFF;
+    --tit_kawak:#5C50D1;
+
+    --main_font: 'Mitr', sans-serif;;
 }
 *{
-    
+    font-family: var(--main_font);
+    color: var(--txt_dark);
+    -webkit-font-smoothing: antialiased;
+}
+.spacer{
+    display: block;
+    height: 60px;
+    width: 100%;
+}
+.center{
+    display: block;
+    padding: 0 20px;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+.btn_fill, .btn_outline{
+    text-align: center;
+    padding: 6px 16px;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 13px;
+    text-transform: uppercase;
+    text-decoration: none;
+    &.c1{
+        background-color: var(--bg-button1);
+        color: var(--txt-button1);
+    }
+    &.c2{
+        background-color: var(--bg-button3);
+        color: var(--txt-button2);
+    }
+    &.c3{
+        background-color: var(--bg-button2);
+        color: var(--txt-button1);
+    }
+}
+.btn_outline{
+    border: 1px solid var(--border-button);
+    color: var(--txt-button2);
+    font-weight: 500;
 }
