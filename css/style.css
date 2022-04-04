@@ -767,6 +767,29 @@ section {
   display: none !important;
 }
 
+.desc_hero_txt {
+  margin-bottom: 30px;
+}
+
+.col_gen_img_hero {
+  display: flex;
+  justify-content: center;
+}
+.col_gen_img_hero img {
+  width: 60%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.s_funcionalidades::before {
+  left: auto;
+  right: 0;
+  background: url("../images/diseno/02-funcionalidades/bg_hero.png");
+  max-width: inherit;
+  z-index: -1;
+}
+
 @media screen and (max-width: 1050px) {
   .spacer {
     height: 60px;
