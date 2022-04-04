@@ -45,6 +45,7 @@ body {
 
 .btn_fill,
 .btn_outline {
+  display: inline-block;
   text-align: center;
   padding: 6px 16px;
   border-radius: 4px;
@@ -206,8 +207,11 @@ header {
 }
 .header_kawak .cont_h_kawak .logo_h_kawak,
 .header_k_workflow .cont_h_kawak .logo_h_kawak {
-  display: inline-block;
+  display: flex;
   max-height: 38px;
+  padding-left: 12px;
+  box-sizing: border-box;
+  align-items: center;
 }
 .header_kawak .cont_h_kawak .logo_h_kawak img,
 .header_k_workflow .cont_h_kawak .logo_h_kawak img {
@@ -473,10 +477,6 @@ section {
   position: relative;
 }
 
-.sliderLogos .swiper-slide {
-  height: calc((100% - 30px) / 2) !important;
-}
-
 .c_gen_hero {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -617,6 +617,12 @@ section {
 .colx2_procesos .c_proceso_img {
   width: 60%;
 }
+.colx2_procesos .c_proceso_img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
 .colx2_procesos.rtl {
   flex-direction: row-reverse;
 }
@@ -699,13 +705,69 @@ section {
      object-fit: cover;
 }
 
+.logo_workflow_mobile {
+  display: flex;
+  align-items: center;
+}
+.logo_workflow_mobile img {
+  width: 100%;
+  height: 88%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background-color: transparent;
+  border: 2px solid var(--bg-button1);
+  transition: 300ms ease;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: var(--bg-button1);
+  width: 20px;
+  border-radius: 100px;
+}
+
+.swiper-button-next, .swiper-button-prev {
+  background-color: var(--bg-button1);
+  border-radius: 100px;
+  width: 40px;
+  height: 40px;
+}
+
+.swiper-button-next:after, .swiper-button-prev:after {
+  font-size: 22px;
+  font-weight: 900;
+  color: var(--txt-button1);
+}
+
+.cont_slider_areas .swiper-button-next, .cont_slider_areas .swiper-button-prev {
+  top: 33%;
+}
+
+.tit_mobile h2 {
+  color: var(--txt-button2) !important;
+}
+
+.cont_slider_logos {
+  position: relative;
+  padding: 0 60px 60px;
+  box-sizing: border-box;
+}
+
 @media screen and (max-width: 1050px) {
+  .spacer {
+    height: 60px;
+  }
+
   .header_k_workflow {
     display: none;
   }
 
   .logo_workflow_mobile {
-    display: block !important;
+    display: flex !important;
   }
 
   .nav_kawak {
@@ -715,7 +777,7 @@ section {
     z-index: 10;
     background: var(--C5);
     left: 0;
-    top: 59px;
+    top: 57px;
     margin: auto;
     flex-direction: column;
     transform: translateX(100%);
@@ -729,5 +791,153 @@ section {
 
   .btn_navbar_menu {
     display: flex;
+  }
+
+  .colx2_procesos .c_proceso_img {
+    width: 100%;
+  }
+
+  .colx2_procesos .c_proceso_desc {
+    width: 100%;
+  }
+
+  .s_banner::before {
+    bottom: -83px;
+  }
+
+  .c_gen_hero .col_hero_desc h2 {
+    font-size: 28px;
+  }
+
+  .btn_navbar_menu a {
+    margin-right: 0;
+  }
+
+  .header_kawak .nav_kawak ul {
+    padding: 40px 0 0;
+  }
+
+  .header_kawak .nav_kawak ul li a {
+    font-size: 24px;
+  }
+
+  .tit_mobile {
+    display: block !important;
+  }
+}
+@media screen and (max-width: 768px) {
+  .colx2_procesos {
+    flex-direction: column;
+  }
+
+  .colx2_procesos.rtl {
+    flex-direction: column;
+  }
+
+  .colx2_procesos .c_proceso_desc h4, .colx2_procesos .c_proceso_desc div {
+    text-align: center;
+  }
+
+  .colx2_procesos .c_proceso_desc {
+    align-items: center;
+  }
+
+  .colx2_procesos {
+    margin-bottom: 60px;
+  }
+
+  .s_banner::before {
+    display: none;
+  }
+
+  .c_gen_hero {
+    grid-template-columns: 1fr;
+  }
+
+  .c_gen_hero .col_gen_form {
+    display: none;
+  }
+
+  .c_gen_hero .col_hero_desc h2 {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .c_gen_hero .col_hero_desc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .c_footer {
+    grid-template-columns: 1fr;
+  }
+
+  .c_footer .logos_adicionales {
+    text-align: center;
+    width: 100%;
+  }
+
+  .c_footer .logos_adicionales {
+    text-align: center;
+  }
+
+  .txt_seo {
+    text-align: center !important;
+  }
+
+  .logo_footer {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+  }
+
+  .header_kawak .cont_h_kawak .logo_h_kawak {
+    padding-left: 0;
+  }
+
+  .header_kawak .cont_h_kawak .logo_h_kawak img {
+    height: 80%;
+  }
+
+  .logo_workflow_mobile img {
+    height: 66%;
+  }
+
+  .nav_kawak {
+    gap: 10px;
+  }
+
+  .s_kawak_workflow .c_lograr .c_items {
+    grid-template-columns: 1fr;
+  }
+
+  .s_kawak_workflow .c_lograr .c_items .col_items {
+    text-align: center;
+  }
+
+  .s_kawak_workflow {
+    padding-top: 60px;
+  }
+
+  .swiper-button-prev, .swiper-rtl .swiper-button-next {
+    left: -5px;
+  }
+
+  .swiper-button-next, swiper-rtl .swiper-button-prev {
+    right: -5px;
+  }
+
+  .swiper-button-next, .swiper-button-prev {
+    width: 30px;
+    height: 30px;
+  }
+
+  .cont_slider_areas {
+    padding: 0;
+  }
+
+  .cont_slider_areas .swiper-button-next, .cont_slider_areas .swiper-button-prev {
+    display: none;
   }
 }/*# sourceMappingURL=style.css.map */
