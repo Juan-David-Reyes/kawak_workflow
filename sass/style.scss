@@ -18,7 +18,8 @@
     --txt_light:#FFFFFF;
     --tit_kawak:#5C50D1;
 
-    --main_font: 'Mitr', sans-serif;;
+    --main_font: 'Mitr', sans-serif;
+    --fontawesome: "Font Awesome 5 Pro";
 }
 *{
     font-family: var(--main_font);
@@ -30,7 +31,7 @@ body{
 }
 .spacer{
     display: block;
-    height: 60px;
+    height: 100px;
     width: 100%;
 }
 .center{
@@ -49,6 +50,9 @@ body{
     font-size: 13px;
     text-transform: uppercase;
     text-decoration: none;
+    outline: 0;
+    border: 0;
+    cursor: pointer;
     &.c1{
         background-color: var(--bg-button1);
         color: var(--txt-button1);
@@ -56,10 +60,102 @@ body{
     &.c2{
         background-color: var(--bg-button3);
         color: var(--txt-button2);
+        border: 1px solid var(--border-button);
     }
     &.c3{
         background-color: var(--bg-button2);
         color: var(--txt-button1);
+    }
+}
+.cont_input{
+    position: relative;
+    &:focus-within{
+        input{
+            border: 1px solid var(--border-button);
+        }
+        input + label, textarea + label{
+            top: -10px;
+            color:var(--txt-button2);
+            font-size: 13px;
+        }
+    }
+    input, textarea{
+        background-color: transparent;
+        border: 1px solid #D2D2D2;
+        border-radius: 4px;
+        font-size: 14px;
+        font-weight: 400;
+        color: #4D4D4D;
+        padding: 8px;
+        box-sizing: border-box;
+        height: 34px;
+        width: 100%;
+        outline: 0;
+        &:not(:placeholder-shown){
+            + label{
+                top: -10px;
+                font-size: 13px;
+            }
+        }
+    }
+    label{
+        position: absolute;
+        color: #D2D2D2;
+        font-size: 14px;
+        left: 4px;
+        top: 8px;
+        background-color: #FFF;
+        padding: 0 6px;
+        box-sizing: border-box;
+        transition: 300ms ease;
+    }
+    textarea{
+        height: auto;
+        min-height: 40px;
+    }
+}
+.cont_btn_submit{
+    display: flex;
+    justify-content: flex-end;
+}
+.cont_input_chk{
+    font-size: 14px;
+    display: flex;
+    align-items: flex-start;
+    gap: 4px;
+    input[type=checkbox]{
+        cursor: pointer;
+        appearance: none;
+        width: 16px;
+        height: 16px;
+        border-radius: 4px;
+        border: 1px solid #DADADA;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        outline: 0;
+        &:checked{
+            border: 1px solid var(--bg-button1);
+            background-color: var(--bg-button1);
+            &::before{
+                content:'\f00c';
+                font-family: var(--fontawesome);
+                color: var(--txt_light);
+                font-weight: 600;
+                font-size: 13px;
+            }
+
+        }
+    }
+    label{
+        color: #B9B9B9;
+        a{
+            text-decoration: none;
+            color: var(--txt-button2);
+            &:hover{
+                text-decoration: underline;
+            }
+        }
     }
 }
 .btn_outline{
@@ -79,7 +175,7 @@ header{
 .header_kawak, .header_k_workflow{
     width: 100%;
     background-color: #FFFFFF;
-    padding: 10px 0;
+    padding: 8px 0;
     box-sizing: border-box;
     .cont_h_kawak{
         display: flex;
@@ -293,5 +389,57 @@ footer{
             }
         }
     }
+}
 
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.c_gen_hero{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    padding: 100px 0;
+    .col_gen_form{
+        justify-self: center;
+        back
+        form{
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 14px;
+            background-color: #FFFFFF;
+            padding: 20px;
+            box-sizing: border-box;
+            box-shadow: 0px 10px 22px -8px rgba(0, 0, 0, 0.25);
+            border-radius: 8px;
+            max-width: 300px;
+        }
+    }
 }
