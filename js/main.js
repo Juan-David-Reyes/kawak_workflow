@@ -5,6 +5,7 @@ $(document).ready(function(){
     $('.btn_navbar_menu').click(function(){
         $('.nav_kawak').toggleClass('active_navbar_mobile');
         $('body').toggleClass('scrollLock');
+        $('.btn_navbar_menu a span').toggleClass('closeIcon')
     });
 
     function swiperSliderAreas(){

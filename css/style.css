@@ -579,7 +579,8 @@ section {
   flex-direction: column;
 }
 .cont_slider_areas .swiper-slide picture img {
-  width: 100%;
+  width: 90%;
+  margin: auto;
   height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
@@ -753,8 +754,17 @@ section {
 
 .cont_slider_logos {
   position: relative;
-  padding: 0 60px 60px;
+  padding: 0 60px;
+  margin-bottom: 60px;
   box-sizing: border-box;
+}
+
+.closeIcon::before {
+  content: "\f00d";
+}
+
+.nav_kawak .nav_workflow_mobile_menu {
+  display: none !important;
 }
 
 @media screen and (max-width: 1050px) {
@@ -764,6 +774,10 @@ section {
 
   .header_k_workflow {
     display: none;
+  }
+
+  .nav_kawak .nav_workflow_mobile_menu {
+    display: flex !important;
   }
 
   .logo_workflow_mobile {
@@ -939,5 +953,13 @@ section {
 
   .cont_slider_areas .swiper-button-next, .cont_slider_areas .swiper-button-prev {
     display: none;
+  }
+
+  .tit_section h3 {
+    font-size: 1.2rem;
+  }
+
+  .c_gen_hero .col_hero_desc h2 {
+    font-size: 24px;
   }
 }/*# sourceMappingURL=style.css.map */
