@@ -7,12 +7,21 @@ $(window).scroll(function() {
     $(".h_workflow").removeClass("fixed");
     $(".spacer").removeClass("spacer_mod");
   }
+
+
+/*   if ($(window).width() < 768) {
+    alert('Less than 960');
+  }
+  else {
+    alert('More than 960');
+  } */
+
 });
 
 // *********
 
 $(document).ready(function(){
-  
+
     setTimeout(function(){
       $(".logo_h_workflow").css("opacity",1);
     },900)
@@ -25,9 +34,7 @@ $(document).ready(function(){
     $('.btn_nav_workflow').click(function(){
       $(ArrowRotate).toggleClass('active_a_workf')
       $(menuDesplegableWorkflow).slideToggle();
-    })
-
-  
+    });
 
     const body = document.querySelector('body');
 
@@ -36,6 +43,19 @@ $(document).ready(function(){
         $('body').toggleClass('scrollLock');
         $('.btn_navbar_menu a span').toggleClass('closeIcon')
     });
+
+    /* PREGUNTAS FRECUENTES */
+
+    
+    $('.pregunta').click(function(){
+      $('.pregunta').removeClass('preg_active')
+      $('.respuesta').slideUp('preg_active')
+
+      $(this).toggleClass('preg_active')
+      $(this).next().slideToggle();
+    });
+
+    /* ************* */
 
     function swiperSliderAreas(){
         const swiper = new Swiper(".sliderAreas", {
@@ -75,8 +95,8 @@ $(document).ready(function(){
     
     function swiperSliderLogos(){
         const swiper = new Swiper(".sliderLogos", {
-            spaceBetween: 30,
-            slidesPerView: 5,
+            spaceBetween: 10,
+            slidesPerView: 1,
             pagination: {
                 el: ".sliderLogos .swiper-pagination",
                 clickable: true,
@@ -85,9 +105,33 @@ $(document).ready(function(){
                 nextEl: ".cont_slider_logos .swiper-button-next",
                 prevEl: ".cont_slider_logos .swiper-button-prev",
             },
-            // grid: {
-            //     rows: 2,
-            // },
+            breakpoints: {
+              // when window width is >= 320px
+              390: {
+                slidesPerView: 2,
+                spaceBetween: 10
+              },
+              // when window width is >= 480px
+              440: {
+                  slidesPerView: 2,
+                  spaceBetween: 20
+                },
+              // when window width is >= 480px
+              600: {
+                slidesPerView: 3,
+                spaceBetween: 20
+              },
+              // when window width is >= 640px
+              800: {
+                slidesPerView: 4,
+                spaceBetween: 20
+              },
+              // when window width is >= 640px
+              1000: {
+                slidesPerView: 5,
+                spaceBetween: 20
+              }
+            }
         });
     }
     

@@ -96,6 +96,9 @@ body {
     height: 00px;
     width: 100%;
 }
+h1,h2,h3,h4,h5,h6{
+    font-weight: 500;
+}
 .spacer_mod{
     height: 45px;
 }
@@ -852,16 +855,257 @@ section {
     transform: rotate(180deg);
 }
 
+.s_planes{
+    background: url('../images/diseno/03-precios/bg_header.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0 0 100px;
+    box-sizing: border-box;
+}
 
+.c_planes{
+    .tit_section{
+        max-width: 600px;
+    }
+    h1{
+        color: var(--txt_light);
+        text-align: center;
+        font-weight: 500;
+    }
+}
 
+.c_cards_precios{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    align-items: center;
+}
 
+.card_precio{
+    background-color: var(--C5);
+    border-radius: 8px;
+    overflow: hidden;
+    padding:30px;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 330px;
+    &.p1{
+        border-top: 8px solid #F18119;
+    }
+    &.p2{
+        border-top: 8px solid #5EDD5B;
+    }
+    &.p3{
+        border-top: 8px solid #9655D1;
+    }
+}
+
+.c_tipo_paquete{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 20px;
+    h4{
+        margin: 0;
+        color: var(--C3);
+        font-size: 24px;
+        font-weight: 500;
+    }
+    div{
+        padding: 4px 8px;
+        box-sizing: border-box;
+        border-radius: 4px;
+        border:1px solid var(--C3);
+        color: var(--C3);
+        text-align: center;
+        width: max-content;
+        justify-self: flex-start;
+    }
+}
+
+.c_precio{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 20px;
+    .valor_p{
+        font-size: 64px;
+        color: var(--C3);
+        font-weight: 600;
+        text-align: center;
+    }
+    .desc_precio{
+        text-align: left;
+
+    }
+}
+.c_btn_w100{
+    width: 100%;
+    text-align: center;
+}
+.btn_paquete{
+    margin: auto;
+    font-size: 18px;
+}
+
+.c_caracteristicas_paquetes{
+    margin: 20px 0 0;
+    padding: 20px 0 0;
+    box-sizing: border-box;
+    border-top: 1px solid rgb(103, 103, 103);
+    h5{
+        text-align: left;
+        margin-top: 0;
+        font-size: 16px;
+        text-transform: uppercase;
+    }
+    ul{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        font-size: 15px;
+        li{
+            margin-bottom: 20px;
+            display: grid;
+            grid-template-columns: 1fr 20px;
+            gap: 10px;
+            font-size: 14px;
+            align-items: center;
+            font-weight: 400;
+        }
+    }
+}
+
+.tooltip{
+    position: relative;
+    span{
+        font-weight: 400;
+    }
+    .txt_tooltip{
+        position: absolute;
+        display: none;
+        top: 0px;
+        bottom: 0px;       
+        right: 30px;
+        margin: auto;
+        font-size: 12px;
+        width: 200px;
+        background-color: var(--C3);
+        padding: 4px;
+        box-sizing: border-box;
+        border-radius: 4px;
+        color: var(--txt_light);
+        transition: 300ms ease;
+        text-align: center;
+        height: fit-content;
+    }
+    &:hover{
+        .txt_tooltip{
+            display: block;
+        }
+    }
+}
+
+.c_planes_inluye{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    justify-content: center;
+    width: 100%;
+    max-width: 700px;
+    margin: auto;
+
+    .card_plan_inc{
+        text-align: center;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 30px;
+        font-size: 15px;
+        font-weight: 400;
+    }
+}
+
+.c_banner_single{
+    text-align: center;
+    padding: 30px 0;
+}
+
+.s_banner_single_color{
+    width: 100%;
+    background-color: var(--bg-button1);
+    padding: 60px 0;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+    h2{
+        color: var(--txt_light);
+        text-transform: uppercase;
+        text-align: center;
+        max-width: 1000px;
+        margin: 0 auto 30px;
+    }
+    .btn_fill{
+        background-color: var(--bg-button3);
+        color: var(--C1);
+        font-size: 16px;
+    }
+}
+.s_preguntas{
+
+    .tit_section{
+        h3{
+            margin-bottom: 0;
+        }
+    }
+}
+.c_preguntas{
+    width: 100%;
+    max-width: 650px;
+    margin: auto;
+    padding: 0 0 80px;
+    box-sizing: border-box;
+    .pregunta{
+        background: #FFFFFF;
+        box-shadow: 0px 10px 10px -6px rgba(0, 0, 0, 0.08);
+        border-radius: 4px;
+        display: grid;
+        grid-template-columns: 1fr 20px;
+        gap: 20px;
+        align-items: center;
+        padding: 12px;
+        box-sizing: border-box;
+        margin-bottom: 10px;
+        h5{
+            margin: 0;
+            font-size: 16px;
+        }
+        span{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: 300ms ease;
+        }
+        &.preg_active{
+            span{
+                transform: rotate(90deg);
+                color: var(--C1);
+            }
+        }
+    }
+    .respuesta{
+        display: none;
+        padding: 10px 20px 20px;
+        box-sizing: border-box;
+        font-size: 15px;
+        font-weight: 300;
+        line-height: 1.4;
+    }
+}
 
 @media screen and (max-width: 1200px) {
 }
 @media screen and (max-width: 1050px) {
-    .spacer{
-        height: 60px;
-    }
     .btn_nav_workflow{
         display: flex;
     }
