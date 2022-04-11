@@ -1579,6 +1579,10 @@ section {
   .card_precio {
     max-width: initial;
   }
+
+  .spacer_mod {
+    height: 110px;
+  }
 }
 @media screen and (max-width: 480px) {
   .c_sabes_que .col:last-child {

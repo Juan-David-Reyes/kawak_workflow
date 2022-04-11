@@ -4,23 +4,15 @@ $(window).scroll(function() {
       $(".h_workflow").addClass("fixed");
       $(".spacer").addClass("spacer_mod");
   }else{
-    $(".h_workflow").removeClass("fixed");
-    $(".spacer").removeClass("spacer_mod");
+      $(".h_workflow").removeClass("fixed");
+      $(".spacer").removeClass("spacer_mod");
   }
-
-
-/*   if ($(window).width() < 768) {
-    alert('Less than 960');
-  }
-  else {
-    alert('More than 960');
-  } */
-
 });
 
 // *********
 
 $(document).ready(function(){
+
 
     setTimeout(function(){
       $(".logo_h_workflow").css("opacity",1);
