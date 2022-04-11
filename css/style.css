@@ -1500,7 +1500,7 @@ section {
   }
 
   .tit_section h3 {
-    font-size: 1.2rem;
+    font-size: 28px;
   }
 
   .c_gen_hero .col_hero_desc h2 {
@@ -1606,5 +1606,9 @@ section {
 
   .s_banner_single_color h2 {
     font-size: 20px;
+  }
+
+  .colx2_procesos .c_proceso_desc h4 {
+    font-size: 22px;
   }
 }/*# sourceMappingURL=style.css.map */

@@ -40,11 +40,18 @@ $(document).ready(function(){
 
     
     $('.pregunta').click(function(){
-      $('.pregunta').removeClass('preg_active')
-      $('.respuesta').slideUp('preg_active')
+      
+      if ($(this).hasClass('preg_active')) {
+        return false
+      }else{
+        $('.pregunta').removeClass('preg_active')
+        $('.respuesta').slideUp('preg_active')
+  
+        $(this).toggleClass('preg_active')
+        $(this).next().slideToggle();
+      }
 
-      $(this).toggleClass('preg_active')
-      $(this).next().slideToggle();
+
     });
 
     /* ************* */
