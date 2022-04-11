@@ -1030,6 +1030,11 @@ section {
 .c_banner_single{
     text-align: center;
     padding: 30px 0;
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
 }
 
 .s_banner_single_color{
@@ -1271,6 +1276,12 @@ section {
     }
 }
 
+.video{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 @media screen and (max-width: 1200px) {
 }
@@ -1354,6 +1365,17 @@ section {
     .tit_mobile{
         display: block!important;
     }
+    .s_caracteristicas_fondo .c_caracteristicas_fondo{
+        display: flex;
+        gap: 30px;
+        flex-direction: column-reverse;
+    }
+    .c_sabes_que{
+        gap: 60px;
+    }
+    .card_precio{
+        padding: 10px;
+    }
 }
 @media screen and (max-width: 768px) {
     .colx2_procesos{
@@ -1363,7 +1385,7 @@ section {
         flex-direction: column;
     }
     .colx2_procesos .c_proceso_desc h4, .colx2_procesos .c_proceso_desc div{
-        text-align: center;
+        text-align: left;
     }
     
     .colx2_procesos .c_proceso_desc{
@@ -1466,8 +1488,62 @@ section {
     .header_k_workflow .nav_workflow ul{
         top: 109px;
     }
+    .c_caracteristicas{
+        grid-template-columns: 1fr;
+    }
+    .c_caracteristicas picture{
+        display: inline-block;
+        max-height: 250px;
+    }
+    .c_caracteristicas picture img{
+        width: 100%;
+    }
+    .c_sabes_que{
+        grid-template-columns: 1fr;
+    }
+    .col_gen_img_hero{
+        display: none;
+    }
+    .c_caracteristicas{
+        padding: 60px 0 0px;
+    }
+    .c_sabes_que{
+        padding: 60px 0 0px;
+    }
+    .c_cards_precios{
+        grid-template-columns: 1fr;
+    }
+    .card_precio{
+        max-width: initial;
+    }
 }
 @media screen and (max-width: 480px) {
+    .c_sabes_que .col:last-child{
+        grid-template-columns: 1fr;
+    }
+    .cont_item_c:last-child{
+        border-bottom: 0px;
+    }
+    .logo_h_workflow img{
+        width: 120px;
+        height: 32px;
+    }
+    .header_k_workflow .cont_h_worflow{
+        grid-template-columns: 130px 1fr;
+    }
+    .s_inicie_ahora .c_inicie_ahora .desc_inicie_ahora{
+        font-size: 18px;
+    }
+    .video iframe{
+        max-height: 210px;
+    }
+    .c_planes_inluye{
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+    .c_planes_inluye .card_plan_inc{
+        font-size: 14px;
+    }
 }
 @media screen and (max-width: 390px) {
 }
