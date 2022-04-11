@@ -1,4 +1,33 @@
+$(window).scroll(function() {    
+  const scroll = $(window).scrollTop();    
+  if (scroll >= 53) {
+      $(".h_workflow").addClass("fixed");
+      $(".spacer").addClass("spacer_mod");
+  }else{
+    $(".h_workflow").removeClass("fixed");
+    $(".spacer").removeClass("spacer_mod");
+  }
+});
+
+// *********
+
 $(document).ready(function(){
+  
+    setTimeout(function(){
+      $(".logo_h_workflow").css("opacity",1);
+    },900)
+
+/*     MENU MOBILE WORKFLOW */
+
+    const menuDesplegableWorkflow = document.querySelector('.header_k_workflow .nav_workflow ul');
+    const ArrowRotate = document.querySelector('.btn_nav_workflow span');
+
+    $('.btn_nav_workflow').click(function(){
+      $(ArrowRotate).toggleClass('active_a_workf')
+      $(menuDesplegableWorkflow).slideToggle();
+    })
+
+  
 
     const body = document.querySelector('body');
 
